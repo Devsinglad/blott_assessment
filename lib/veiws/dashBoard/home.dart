@@ -205,40 +205,46 @@ class _NewsListViewState extends State<NewsListView> {
                 ),
                 const SizedBox(width: 16),
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            news.source!.toUpperCase(),
-                            style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.grey,
+                  child: SizedBox(
+                    height: 72.h,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              news.source!.toUpperCase(),
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey,
+                              ),
                             ),
-                          ),
-                          Text(
-                            news.getFormattedDate(),
-                            style: const TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey,
+                            Text(
+                              news.getFormattedDate(),
+                              style: const TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        news.headline!.toUpperCase().toString(),
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                          ],
                         ),
-                      ),
-                      const SizedBox(height: 4),
-                    ],
+                        const SizedBox(height: 4),
+                        Text(
+                          news.headline!.toUpperCase().toString(),
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.start,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        const SizedBox(height: 4),
+                      ],
+                    ),
                   ),
                 ),
               ],

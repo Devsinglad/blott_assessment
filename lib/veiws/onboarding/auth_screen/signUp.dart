@@ -1,6 +1,7 @@
 import 'package:blott_assessment/helpers/assets/color.dart';
 import 'package:blott_assessment/helpers/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../helpers/custom_widgets/customSIzedBox.dart';
@@ -92,6 +93,15 @@ class _SignUpFormScreenState extends State<SignUpFormScreen> {
           child: const Icon(Icons.arrow_forward_ios_rounded),
         ),
       ),
-    );
+    )
+        .animate()
+        .fadeIn(duration: 400.ms)
+        .slide(begin: const Offset(0, 1.0))
+        .animate()
+        .fadeIn(duration: 600.ms)
+        .slide(begin: const Offset(.1, 0.0))
+        .animate()
+        .fadeIn(duration: 900.ms)
+        .slideY(begin: .1, end: .0);
   }
 }
