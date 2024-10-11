@@ -75,8 +75,8 @@ class _SignUpFormScreenState extends State<SignUpFormScreen> {
         ),
       ),
       floatingActionButton: SizedBox(
-        height: 100,
-        width: 100,
+        height: 56,
+        width: 56,
         child: FloatingActionButton(
           onPressed: firstName.isEmpty && lastName.isEmpty
               ? () {}

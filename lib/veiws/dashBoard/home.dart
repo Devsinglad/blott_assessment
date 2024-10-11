@@ -206,7 +206,7 @@ class _NewsListViewState extends State<NewsListView> {
                 const SizedBox(width: 16),
                 Expanded(
                   child: SizedBox(
-                    height: 72.h,
+                    height: 80.h,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -230,7 +230,7 @@ class _NewsListViewState extends State<NewsListView> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 3),
                         Text(
                           news.headline!.toUpperCase().toString(),
                           style: const TextStyle(
